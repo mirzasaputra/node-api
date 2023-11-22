@@ -1,0 +1,6 @@
+{
+    "required": "This field has been required",
+    "unique": "This field has unique",
+    "numeric": "This field has been numeric",
+    "email": "Invalid Email Format"
+}

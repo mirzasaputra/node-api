@@ -1,0 +1,48 @@
+{
+  "name": "billing-isp-backend",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "./src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node .",
+    "serve": "nodemon --exec node_modules/.bin/babel-node .",
+    "build": "babel src -d build --copy-files",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed": "npx sequelize-cli db:seed:all",
+    "migrate-undo": "npx sequelize-cli db:migrate:undo:all",
+    "seed-undo": "npx sequelize-cli db:seed:undo:all"
+  },
+  "keywords": [
+    "billing-isp"
+  ],
+  "author": "mirzasaputra",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.2",
+    "sequelize": "^6.33.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.2",
+    "babel-preset-minify": "^0.5.2",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "sequelize-cli": "^6.6.1"
+  }
+}
